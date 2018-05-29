@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<head>
+
+    <style>
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        h1 
+        {
+            color: orange;
+            text-align: center;
+            font-family: 'Comic Sans MS';
+        }
+
+        h2 {
+            color: orangered;
+            text-align: center;
+            font-family: 'Comic Sans MS';
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+    </style>
+    <link href="~/Views/Home/StyleSheet.css" rel="stylesheet" />
+   
+
+
+</head>
+
+<body>
+    
+    <img src="~/Images/GC-horizontal-darkgray.png" class="center" />
+
+    <h1>Welcome to the Grand Circus Coffee Shop!</h1> 
+    <br /><br />
+
+          <h2>We are a coffee house in a unique building in downtown Detroit.<br />  
+                We serve the best locally roasted coffee </h2>
+
+    
+    
+    
+    <br /><br /><br />
+    
+    <center>
+        <a href="/Home/Index" class="button">Home</a>
+        <a href="/Home/About" class="button">About Grand Circus Coffee Shop</a>
+        <a href="/Home/SignUpForm" class="button">Coffee Club</a>
+        <a href="/Home/Contact" class="button">Contact</a>
+    </center>
+
+    <br />
+</body>

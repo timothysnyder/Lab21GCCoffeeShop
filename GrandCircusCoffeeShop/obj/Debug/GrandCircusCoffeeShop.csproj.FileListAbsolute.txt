@@ -89,3 +89,7 @@ c:\users\tim\source\repos\GrandCircusCoffeeShop\GrandCircusCoffeeShop\obj\Debug\
 c:\users\tim\source\repos\GrandCircusCoffeeShop\GrandCircusCoffeeShop\obj\Debug\GrandCircusCoffeeShop.csproj.CopyComplete
 c:\users\tim\source\repos\GrandCircusCoffeeShop\GrandCircusCoffeeShop\obj\Debug\GrandCircusCoffeeShop.dll
 c:\users\tim\source\repos\GrandCircusCoffeeShop\GrandCircusCoffeeShop\obj\Debug\GrandCircusCoffeeShop.pdb
+C:\Users\Tim\source\repos\GrandCircusCoffeeShop\GrandCircusCoffeeShop\bin\EntityFramework.dll
+C:\Users\Tim\source\repos\GrandCircusCoffeeShop\GrandCircusCoffeeShop\bin\EntityFramework.SqlServer.dll
+C:\Users\Tim\source\repos\GrandCircusCoffeeShop\GrandCircusCoffeeShop\bin\EntityFramework.xml
+C:\Users\Tim\source\repos\GrandCircusCoffeeShop\GrandCircusCoffeeShop\bin\EntityFramework.SqlServer.xml

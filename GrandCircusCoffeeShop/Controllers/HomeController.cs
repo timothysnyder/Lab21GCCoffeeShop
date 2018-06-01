@@ -11,14 +11,31 @@ namespace GrandCircusCoffeeShop.Controllers
     {
         public ActionResult Index()
         {
+           
+
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Menu()
         {
-            ViewBag.Message = "About Grand Circus Coffee Shop.";
+            Coffee_Shop_DBEntities ORM = new Coffee_Shop_DBEntities();
+
+            ViewBag.ItemList = ORM.Items.ToList();
 
             return View();
+        }
+
+        
+
+
+        public ActionResult About()
+        {
+            
+    
+
+            ViewBag.Message = "About Grand Circus Coffee Shop.";
+
+            return View();         
         }
 
         public ActionResult Contact()
@@ -35,13 +52,25 @@ namespace GrandCircusCoffeeShop.Controllers
             return View();
         }
 
-        public ActionResult AddNewUser(UserInfo newUser)
+        public ActionResult AddNewUser(User newUser)
         {
             //validation!
             if (ModelState.IsValid)
             {
-                ViewBag.Message = $"Welcome {newUser.Username}";
+
+                // 1. Create the ORM
+                Coffee_Shop_DBEntities ORM = new Coffee_Shop_DBEntities();
+
+                // 3. Add the new object to the Customer List
+
+                ORM.Users.Add(newUser);
+
+                // 4. Save Changes to the Database
+                ORM.SaveChanges();
+
+                ViewBag.Message = $"Welcome {newUser.UserName}";
                 return View("Confirm");
+            
             }
 
             // to insert the newUser into the Database!
@@ -51,6 +80,8 @@ namespace GrandCircusCoffeeShop.Controllers
                 ViewBag.Address = Request.UserHostAddress;
                 return View("Error");
             }
+
+           
 
         }
 

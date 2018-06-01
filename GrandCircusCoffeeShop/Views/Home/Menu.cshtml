@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Menu";
+}
+
+<h2>Menu</h2>
+
+<h1>
+    "Not in any particular order, here are our most popular coffee drinks"
+</h1>
+
+
+@foreach (var c in ViewBag.ItemList)
+{
+<div class="col-md-3">
+    <p><img src="~/Content/Images/@c.Name .png"</p>
+    <p> @c.Name</p>
+    <p> @c.Description</p>
+    <p> @c.Price</p>
+    
+
+    @*<p><a href="/Home/ShowItemDetails?Item=@c.Name">Details</a></p>
+    <p><a href="/Home/ShowItemDetails?Description=@c.Description">Details</a></p>*@
+
+</div>
+}
+

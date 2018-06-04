@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "EditItemDetails";
+}
+
+<h2>EditItemDetails</h2>
+
+<form action="/Home/SaveUpdatedItem" method="post">
+    Item Name: <input type="text" name="Name" value="@ViewBag.Item.Name" readonly /><br /><br />
+
+    Description: <input type="text" name="Description" value="@ViewBag.Item.Description" required /><br /><br />
+
+    Price: <input type="text" name="Price" value="@ViewBag.Item.Price" required /><br /><br />
+
+    <input type="submit" value="Update Item!" />
+
+</form>
+

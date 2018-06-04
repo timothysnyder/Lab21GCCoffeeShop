@@ -1,18 +1,25 @@
 ﻿@{
-    ViewBag.Title = "About Our Coffee Shop";
+//ViewBag.Title = "About Our Coffee Shop";
 }
-<h2>@ViewBag.Title.</h2>
+@*<h2>@ViewBag.Title.</h2>*@
 <h3>@ViewBag.Message</h3>
 
 <head>
     <link href="~/Views/Home/StyleSheet.css" rel="stylesheet" />
 
 </head>
+<img src="~/Content/Images/GC-horizontal-darkgray.png" class="center" />
 
-<p>Thanks for Stopping By! Make sure you Join our Coffee Club for Special Offers.</p>
-<img src="~/Images/grand-circus-logo.jpg" />
+<br /><br />
 
-<table class="table">
+<p class="center">Thanks for Stopping By! Make sure you Join our <a href="/Home/SignUpForm">Coffee Club</a> for Special Offers.</p>
+
+<br />
+
+<img src="~/Content/Images/grand-circus-logo.jpg" class="center" />
+
+
+@*<table class="table">
     <tr>
         <th>Name</th>
         <th>Description</th>
@@ -26,4 +33,4 @@
 
         </tr>
     }
-</table>
+</table>*@

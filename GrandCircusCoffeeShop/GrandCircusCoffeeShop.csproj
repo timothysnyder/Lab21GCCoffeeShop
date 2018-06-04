@@ -185,6 +185,7 @@
     <Content Include="Content\Images\Café au Lait .png" />
     <Content Include="Content\Images\Cappuccino .png" />
     <Content Include="Content\Images\Chai Latte .png" />
+    <Content Include="Content\Images\Dr K .jpg" />
     <Content Include="Content\Images\Espresso .png" />
     <Content Include="Content\Images\Latte .png" />
     <Content Include="Content\Images\Macchiato .png" />
@@ -247,6 +248,10 @@
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Home\Confirm.cshtml" />
     <Content Include="Views\Home\Menu.cshtml" />
+    <Content Include="Views\Home\Admin.cshtml" />
+    <Content Include="Views\Home\EditItemDetails.cshtml" />
+    <Content Include="Views\Home\AddItemDetails.cshtml" />
+    <Content Include="Views\Home\Errors.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

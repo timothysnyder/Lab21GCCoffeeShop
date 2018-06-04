@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "AddItemDetails";
+}
+
+<h2>AddItemDetails</h2>
+
+<form action="/Home/AddNewItem" method="post">
+    Item Name: <input type="text" name="Name" required /><br /><br />
+
+    Description: <input type="text" name="Description" required /><br /><br />
+
+    Price: <input type="number" name="Price" required /><br /><br />
+
+    <input type="submit" value="Add Item!" />
+
+</form>
+

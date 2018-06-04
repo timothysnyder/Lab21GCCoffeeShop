@@ -11,7 +11,7 @@ namespace GrandCircusCoffeeShop.Controllers
     {
         public ActionResult Index()
         {
-           
+
 
             return View();
         }
@@ -36,12 +36,12 @@ namespace GrandCircusCoffeeShop.Controllers
 
         public ActionResult About()
         {
-            
-    
+
+
 
             ViewBag.Message = "About Grand Circus Coffee Shop.";
 
-            return View();         
+            return View();
         }
 
         public ActionResult Contact()
@@ -75,7 +75,7 @@ namespace GrandCircusCoffeeShop.Controllers
 
                 ViewBag.Message = $"Welcome {newUser.UserName}";
                 return View("Confirm");
-            
+
             }
 
             // to insert the newUser into the Database!
@@ -111,7 +111,6 @@ namespace GrandCircusCoffeeShop.Controllers
             Coffee_Shop_DBEntities ORM = new Coffee_Shop_DBEntities();
 
             ViewBag.Item = ORM.Items.Find(Name);
-            ORM.SaveChanges();
 
             return View();
 
@@ -130,19 +129,49 @@ namespace GrandCircusCoffeeShop.Controllers
 
                 OldItemRecord.Name = updatedItem.Name;
                 OldItemRecord.Description = updatedItem.Description;
+                OldItemRecord.Price = updatedItem.Price;
 
                 // flip state to "modified"
                 ORM.Entry(OldItemRecord).State = System.Data.Entity.EntityState.Modified;
 
                 // 4. Save back to the Database 
                 ORM.SaveChanges();
-                return RedirectToAction("EditItemDetails");
+                return RedirectToAction("Admin");
             }
             else
-            {      
-                    ViewBag.ErrorMessage = "Oops! Something went wrong!";
-                    return View("Error");
+            {
+                ViewBag.ErrorMessage = "Oops! Something went wrong!";
+                return View("Error");
             }
         }
+
+        public ActionResult DeleteName(string Name)
+        {
+            //1. Connect to the ORM (Model.Context.cs page) 
+
+            Coffee_Shop_DBEntities ORM = new Coffee_Shop_DBEntities();
+
+            //2. Find the item you want to delete
+
+            Item Found = ORM.Items.Find(Name);
+            //2.1  Validation
+            if (Found != null)
+            {
+                //3. Remove the item            
+                ORM.Items.Remove(Found);
+                //4. Save to the Database
+                ORM.SaveChanges();
+
+                return RedirectToAction("Admin"); // execute the About Action again
+            }
+            else
+            {
+                ViewBag.ErrorMessage = "User not found!";
+                return View("Errors");
+            }
+
+
+        }
+
     }
 }

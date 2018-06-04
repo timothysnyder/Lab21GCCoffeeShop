@@ -20,10 +20,10 @@
     <tr>
         <td> @c.Name</td>
         <td> @c.Description</td>
-        <td> @c.Price</td>
+        <td> $@Math.Round(c.Price, 2)</td>
         <td>
-            <a href="/Home/DeleteName?Item=@c.Name" onclick="return confirm('Are You Sure?')" class="btn btn-danger btn-sm">
-                <span class="glyphicon glyphicon-trash"></span> Delete
+            <a href="/Home/DeleteName?Name=@c.Name" onclick="return confirm('Are You Sure?')" class="btn btn-danger btn-sm">
+                <span class="glyphicon glyphicon-trash"></span>Delete
             </a>
         </td>
 

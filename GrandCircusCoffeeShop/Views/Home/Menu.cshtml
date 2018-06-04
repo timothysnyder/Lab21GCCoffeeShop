@@ -14,9 +14,9 @@
 {
 <div class="col-md-3">
     <p><img src="~/Content/Images/@c.Name .png"</p>
-    <p> @c.Name</p>
+    <p align="center"> @c.Name</p>
     <p> @c.Description</p>
-    <p> @c.Price</p>
+    <p align="center"> $ @Math.Round(c.Price,2)</p>
     
 
     @*<p><a href="/Home/ShowItemDetails?Item=@c.Name">Details</a></p>
